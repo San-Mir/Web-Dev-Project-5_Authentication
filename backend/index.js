@@ -7,7 +7,7 @@ require("dotenv").config();
 const app = express();
 app.use(
   cors({
-    // credentials: true,
+    credentials: true,
     origin: process.env.FRONTEND_URL,
   })
 );
