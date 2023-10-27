@@ -10,9 +10,13 @@ const Header = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.isLoggedIn);
   const sendLogoutReq = async () => {
-    const res = await axios.post("http://localhost:5000/api/logout", null, {
-      withCredentials: true,
-    });
+    const res = await axios.post(
+      `${process.env.REACT_APP_BACKEND_URL}api/logout`,
+      null,
+      {
+        withCredentials: true,
+      }
+    );
     if (res.status == 200) {
       return res;
     }

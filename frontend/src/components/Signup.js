@@ -17,7 +17,7 @@ const Signup = () => {
   };
   const sendRequest = async () => {
     const res = axios
-      .post("http://localhost:5000/api/signup", {
+      .post(`${process.env.REACT_APP_BACKEND_URL}api/signup`, {
         name: inputs.name,
         email: inputs.email,
         password: inputs.password,

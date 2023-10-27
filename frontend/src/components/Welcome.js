@@ -7,7 +7,7 @@ const Welcome = () => {
 
   const refreshToken = async () => {
     const res = await axios
-      .get("http://localhost:5000/api/refresh", {
+      .get(`${process.env.REACT_APP_BACKEND_URL}api/refresh`, {
         withCredentials: true,
       })
       .catch((err) => console.log(err));
@@ -17,7 +17,7 @@ const Welcome = () => {
   };
   const sendRequest = async () => {
     const res = await axios
-      .get("http://localhost:5000/api/user", {
+      .get(`${process.env.REACT_APP_BACKEND_URL}api/user`, {
         withCredentials: true,
       })
       .catch((err) => console.log(err));
