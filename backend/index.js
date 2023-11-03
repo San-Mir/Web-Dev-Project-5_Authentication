@@ -24,5 +24,3 @@ mongoose
     console.log("Connected to Port 5000");
   })
   .catch((err) => console.log(err));
-
-export default app;

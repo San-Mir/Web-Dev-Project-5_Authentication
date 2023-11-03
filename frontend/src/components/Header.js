@@ -11,7 +11,7 @@ const Header = () => {
   const isLoggedIn = useSelector((state) => state.isLoggedIn);
   const sendLogoutReq = async () => {
     const res = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}api/logout`,
+      `${process.env.REACT_APP_BACKEND_URL}/api/logout`,
       null,
       {
         withCredentials: true,

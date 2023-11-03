@@ -17,7 +17,7 @@ const Welcome = () => {
   };
   const sendRequest = async () => {
     const res = await axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}api/user`, {
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/user`, {
         withCredentials: true,
       })
       .catch((err) => console.log(err));
