@@ -17,7 +17,7 @@ app.use("/api", router);
 
 mongoose
   .connect(
-    `mongodb+srv://hassan123mirza123:${process.env.MONGODB_Password}@cluster12345.ioc8rnf.mongodb.net/auth?retryWrites=true&w=majority`
+    `mongodb+srv://hassan123mirza123:${process.env.MONGODB_PASSWORD}@cluster12345.ioc8rnf.mongodb.net/auth?retryWrites=true&w=majority`
   )
   .then(() => {
     app.listen(5000);
